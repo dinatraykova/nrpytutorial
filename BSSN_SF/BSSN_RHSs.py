@@ -768,7 +768,7 @@ def BSSN_RHSs():
         vv_rhs += betaU[i]*vv_dD[i]
     # PART 3:     
         for j in range(DIM):
-            vv_rhs += - alpha*gammaUU[i][j]*uu_dDD[j][i] - gammaUU[i][j]*uu_dD[j]*alpha_dD[i] - 2.0*gammaUU[i][j]*phi_dD[j]*uu_dD[i]
+            vv_rhs += - alpha*gammaUU[i][j]*uu_dDD[j][i] - gammaUU[i][j]*uu_dD[j]*alpha_dD[i] - 2.0*alpha*gammaUU[i][j]*phi_dD[j]*uu_dD[i]
     # PART 4: 
             for k in range(DIM):
                 vv_rhs +=  alpha*gammaUU[i][j]*GammabarUDD[k][i][j]*uu_dD[k] 
